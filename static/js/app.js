@@ -1,15 +1,19 @@
 var socket = io();
+var user = "hello@urucas:";
 
 socket.on("log", function(data){
 	var stdout = data.stdout;
 			stdout = uncolor(stdout);
 
 	$(".terminal").append(stdout+"<br />");
+	$(".terminal").animate({
+  	scrollTop: $(".terminal").height()
+  }, 100);	
 });
 
 $(document).ready(function(){
 	$(".form > button").click(function(){
-		$(".terminal").html("test@broken-links: broken-links -s <br />");
+		$(".terminal").html(user+" broken-links -s <br />");
 		socket.emit("test");
 	});
 });
@@ -39,6 +43,6 @@ function uncolor(stdout){
 	stdout = stdout.replace(/\[37m/g, '<span class="white">');
 	stdout = stdout.replace(/\[90m/g, '<span class="gray">');
 	stdout = stdout.replace(/\[39m/g, '</span>');
-	stdout = "test@broken-links: " + stdout;
+	stdout = user + stdout;
 	return stdout;
 }
