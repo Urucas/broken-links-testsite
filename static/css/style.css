@@ -1,0 +1,30 @@
+body{
+	margin:0px;
+	padding:0px;
+}
+
+.terminal{
+	width:500px;
+	height:300px;
+	background-color:#000;
+	color:#f0f0f0;
+	overflow:scroll;
+	font-family:Verdana;
+	font-size:0.7em;
+}
+
+.white{
+	color:white;
+}
+
+.red{
+	color:red;
+}
+
+.yellow{
+	color:yellow;
+}
+
+.cyan{
+	color:cyan;
+}
