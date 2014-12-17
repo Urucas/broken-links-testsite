@@ -1,0 +1,22 @@
+{
+  "name": "broken-links-testsite",
+  "version": "0.0.0",
+  "description": "broken-links-testsite =====================",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Urucas/broken-links-testsite.git"
+  },
+  "author": "Urucas <hello@urucas.com> (http://urucas.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Urucas/broken-links-testsite/issues"
+  },
+  "dependencies": {
+    "express": "~4.10.6",
+    "socket.io": "~1.2.1"
+  }
+}
