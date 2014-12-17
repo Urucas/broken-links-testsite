@@ -4,27 +4,16 @@ body{
 }
 
 .terminal{
-	width:500px;
-	height:300px;
+	width:600px;
+	height:350px;
 	background-color:#000;
-	color:#f0f0f0;
+	color:#ccc;
 	overflow:scroll;
 	font-family:Verdana;
 	font-size:0.7em;
 }
 
-.white{
-	color:white;
-}
-
-.red{
-	color:red;
-}
-
-.yellow{
-	color:yellow;
-}
-
-.cyan{
-	color:cyan;
-}
+.white{ color:white; }
+.red{ color:red; }
+.yellow{ color:yellow; }
+.cyan{ color:cyan; }

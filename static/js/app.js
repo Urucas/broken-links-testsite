@@ -9,8 +9,7 @@ socket.on("log", function(data){
 
 $(document).ready(function(){
 	$(".form > button").click(function(){
-		
-		$(".terminal").text("test@broken-links: broken-links -s");
+		$(".terminal").html("test@broken-links: broken-links -s <br />");
 		socket.emit("test");
 	});
 });

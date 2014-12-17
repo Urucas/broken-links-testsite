@@ -25,10 +25,10 @@ io.on('connection', function(socket){
 				
 				child.stderr.on("data", function(data){
 					console.log("error "+ data);
+					socket.emit("log", {stdout : " "+data});
 				});
 
 				child.stdout.on("data", function(data){
-					console.log(" "+data);
 					socket.emit("log", {stdout : " "+data});
 				});
 			
