@@ -1,5 +1,5 @@
 var socket = io();
-var user = "hello@urucas:";
+var user = '<span class="green">hello@urucas</span><span class="white">:</span>~<span class="magenta">$</span>';
 
 socket.on("log", function(data){
 	var stdout = data.stdout;
