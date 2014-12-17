@@ -35,7 +35,7 @@ io.on('connection', function(socket){
 	});
 });
 
-server.listen(3000, function(){
+server.listen(3000,'localhost', function(){
 	console.log("Server running");
 });
 
