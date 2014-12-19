@@ -12,17 +12,17 @@ body{
 	font-family:Verdana;
 	font-size:0.7em;
 	margin-top:20px;
-	
-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
--moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
--webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+	padding:2px;
+	box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+	-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+	-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
 }
 
 .white{ color:white; }
 .red{ color:red; }
 .yellow{ color:yellow; }
 .cyan{ color:cyan; }
-.green{ color:green; }
+.green{ color:#090; }
 .magenta{ color:magenta; }
 
 #wrapper{
