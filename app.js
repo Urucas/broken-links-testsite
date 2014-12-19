@@ -11,6 +11,16 @@ io.on('connection', function(socket){
 	
 	socket.on("test", function(params){
 
+		if(!params.s.match(/^[a-z0-9-\.]+\.[a-z]{2,4}\/?([^\s<>\#%"\,\{\}\\|\\\^\[\]`]+)?$/)){
+			socket.emit("log", {stdout: "Invalid site url format!"});
+			return;
+		}
+
+		if(!params.e.match(/^[a-z0-9-\.]+\.[a-z]{2,4}\/?([^\s<>\#%"\,\{\}\\|\\\^\[\]`]+)?$/)){
+			socket.emit("log", {stdout: "Invalid site url 404 format!"});
+			return;
+		}
+
 		var spawn = require('child_process').spawn;
 		var args = []; 
 				args.push("-s");
