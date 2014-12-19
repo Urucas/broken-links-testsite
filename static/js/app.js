@@ -12,10 +12,24 @@ socket.on("log", function(data){
 });
 
 $(document).ready(function(){
-	$(".form > button").click(function(){
-		$(".terminal").html(user+" broken-links -s <br />");
-		socket.emit("test");
+	$("#testBtt").click(function(){
+		window.scrollTo(0, 0);
+		
+		var s = $("#site_url").val();
+		var e = $("#site_url_404").val();
+
+		$(".terminal").html(user+" broken-links -s "+s+" -404 "+e+"<br />");
+		socket.emit("test", {s:s, e:e});
 	});
+
+	$("#site_url").keyup(function(){
+		$(".cli-s").text(this.value);
+	});
+
+	$("#site_url_404").keyup(function(){
+		$(".cli-404").text(this.value);
+	});
+
 });
 
 function uncolor(stdout){

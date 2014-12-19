@@ -14,9 +14,9 @@ io.on('connection', function(socket){
 		var spawn = require('child_process').spawn;
 		var args = []; 
 				args.push("-s");
-				args.push("kuesty.com");
+				args.push(params.s);
 				args.push("-404");
-				args.push("kuesty.com/error/e404");
+				args.push(params.e);
 
 		var	child = spawn("broken-links", args);
 				child.on("close", function(code, signal){
